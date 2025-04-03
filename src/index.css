@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --yellowcolor: #faca10;
+  --blackcolorText: #1e1e1e;
+  --graycolorBack: #d4d4d4;
+  --GrayBrackGround: #f2f2f2;
+  --SecondGrayback: #fbfbfb;
+  --nunito: "Nunito", serif;
+  --White: #fff;
+  --Lora: "Lora", serif;
+}
+
+@theme {
+  --color-yellow: var(--yellowcolor);
+  --color-graythird: var(--GrayBrackGround);
+  --color-gray: var(--blackcolorText);
+  --color-graySecond: var(--graycolorBack);
+  --color-graySecond: var(--nunito);
+  --color-white: var(--White);
+  --font-nunito: var(--nunito);
+  --font-Lora: var(--Lora);
+}
+
+@layer components {
+  .menuitem {
+    position: relative;
+  }
+  .menuitem::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--yellowcolor);
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+  }
+  .menuitem:hover ::after {
+    width: 100%;
+  }
+  .header{
+    position: relative;
+  }
+  .header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 13px;
+      width: 100%;
+        height: 3px;
+    background-color: var(--yellowcolor);
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+  }
+}
